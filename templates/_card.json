@@ -1,0 +1,28 @@
+{
+  "front": {
+    "template": "rawhtml|text",
+    "lang": "",
+    "content": "",
+    "media":[
+      {
+        "type": "image|rawhtml|mp3",
+        "link": "",
+        "content": ""
+      }
+    ]
+  },
+  "back": {
+    "template": "rawhtml|text",
+    "lang": "",
+    "content": "",
+    "media":[
+      {
+        "type": "image|rawhtml|mp3",
+        "link": "",
+        "content": ""
+      }
+    ]
+  },
+  "quiz": [],
+  "tags": []
+}

@@ -1,0 +1,19 @@
+{
+  "question": {
+    "template": "rawhtml|text|multimedia",
+    "type": "none|write|select",
+    "lang": "",
+    "text": "",
+    "media":[
+      {
+        "type": "image|svg|mp3",
+        "link": "",
+        "rawhtml": ""
+      }
+    ]
+  },
+  "answer": {
+    "lang": "",
+    "accepted": []
+  }
+}

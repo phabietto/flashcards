@@ -1,0 +1,272 @@
+{
+  "name": "Hangul - Korean alphabet",
+  "description": "Learning the Hangul alphabet with phonetics references.",
+  "lang": "en",
+  "author": "Fabio Bonacina",
+  "latestUpdate": null,
+  "references": [{
+      "name": "Wikipedia",
+      "link": "https://en.wikipedia.org/wiki/Hangul"
+    }
+    ,{
+      "name": "Learn to read and write Korean (YouTube)",
+      "link": "https://www.youtube.com/watch?v=KN4mysljHYc&list=PLDE4E02F3E969D213"
+    }
+    ,{
+      "name": "Korean phonology",
+      "link": "https://en.wikipedia.org/wiki/Korean_phonology"
+    }
+  ],
+  "cards": [
+    {
+      "front": {
+        "template": "text",
+        "lang": "ko",
+        "content": "ㅏ"
+      },
+      "back": {
+        "template": "rawhtml",
+        "lang": "en",
+        "content": "<i>Romanization</i>a<br><i>English word</i><br>H<u>o</u>me<i>IPA</i>/a/",
+        "media":[
+          {
+            "type": "application/ogg",
+            "link": "/resources/a.mp3",
+            "alternative": "https://en.wikipedia.org/wiki/File:PR-open_front_unrounded_vowel.ogg"
+          }
+        ]
+      },
+      "quiz": [],
+      "tags": ["hangul", "vowels", "tall vowel"]
+    }
+    ,{
+      "front": {
+        "template": "text",
+        "lang": "ko",
+        "content": "ㅣ"
+      },
+      "back": {
+        "template": "rawhtml",
+        "lang": "en",
+        "content": "<i>Romanization</i>i<br><i>English word</i>S<u>ee</u><br><i>IPA</i>/i/",
+        "media":[
+          {
+            "type": "application/ogg",
+            "link": "/resources/i.mp3",
+            "alternative": "https://en.wikipedia.org/wiki/File:Close_front_unrounded_vowel.ogg"
+          }
+        ]
+      },
+      "quiz": [],
+      "tags": ["hangul", "vowels", "tall vowel"]
+    }
+    ,{
+      "front": {
+        "template": "text",
+        "lang": "ko",
+        "content": "ㅇ"
+      },
+      "back": {
+        "template": "rawhtml",
+        "lang": "en",
+        "content": "<p>It is silent when used at the beginning of a syllable (it's a consonant placeholder in vowel letters). Pronounced only when it's the ending consonant in a syllable.</p><i>Romanization</i>ieung<br><i>IPA</i>/ŋ/ (only when it's the ending consonant in a syllable)",
+        "media":[
+          {
+            "type": "application/ogg",
+            "link": "https://en.wikipedia.org/wiki/File:Velar_nasal.ogg"
+          }
+        ]
+      },
+      "quiz": [],
+      "tags": ["hangul", "consonant"]
+    }
+    ,{
+      "front": {
+        "template": "text",
+        "lang": "ko",
+        "content": "ㅑ"
+      },
+      "back": {
+        "template": "rawhtml",
+        "lang": "en",
+        "content": "<i>Romanization</i>ya<br><i>English word</i><u>Ya</u>rd<br><i>IPA</i>/jɐ/",
+        "media":[
+          {
+            "type": "audio/mpeg",
+            "link": "/resources/ya.mp3",
+            "alternative": "https://zkorean.com/study/serve_audio_public/170fe09ec74645617a6d0ab84785d740ce93a0d5acebf59a_28.mp3"
+          }
+        ]
+      },
+      "quiz": [],
+      "tags": ["hangul", "vowels", "tall vowel"]
+    }
+    ,{
+      "front": {
+        "template": "text",
+        "lang": "ko",
+        "content": "ㅓ"
+      },
+      "back": {
+        "template": "rawhtml",
+        "lang": "en",
+        "content": "<i>Romanization</i>eo<br><i>English word</i>D<u>o</u>g<br><i>IPA</i>/ʌ/",
+        "media":[
+          {
+            "type": "audio/mpeg",
+            "link": "/resources/eo.mp3",
+            "alternative": "https://zkorean.com/study/serve_audio_public/170fe09ec7464561a651f112bcc34c74d3a29963db135e55_21.mp3"
+          }
+        ]
+      },
+      "quiz": [],
+      "tags": ["hangul", "vowels", "tall vowel"]
+    }
+    ,{
+      "front": {
+        "template": "text",
+        "lang": "ko",
+        "content": "ㅕ"
+      },
+      "back": {
+        "template": "rawhtml",
+        "lang": "en",
+        "content": "<i>Romanization</i>yeo<br><i>English word</i><u>You</u>ng<br><i>IPA</i>/jʌ/",
+        "media":[
+          {
+            "type": "mp3",
+            "link": "/resources/yeo.mp3",
+            "alternative": "https://zkorean.com/study/serve_audio_public/170fe09ec746456101755731cb5f1d1e7b63d174fd75cc8f_29.mp3"
+          }
+        ]
+      },
+      "quiz": [],
+      "tags": ["hangul", "vowels", "tall vowel"]
+    }
+    ,{
+      "front": {
+        "template": "text",
+        "lang": "ko",
+        "content": "ㅗ"
+      },
+      "back": {
+        "template": "rawhtml",
+        "lang": "en",
+        "content": "<i>Romanization</i>o<br><i>English word</i>H<u>o</u>me<br><i>IPA</i>/o/",
+        "media":[
+          {
+            "type": "mp3",
+            "link": "/resources/o.mp3",
+            "alternative": "https://zkorean.com/study/serve_audio_public/170fe09ec7464561b5540a40dc0e06cc2d916ecbb6ce058f_22.mp3"
+          }
+        ]
+      },
+      "quiz": [],
+      "tags": ["hangul", "vowels", "fat vowels"]
+    }
+    ,{
+      "front": {
+        "template": "text",
+        "lang": "ko",
+        "content": "ㅛ"
+      },
+      "back": {
+        "template": "rawhtml",
+        "lang": "en",
+        "content": "<i>Romanization</i>yo<br><i>English word</i><u>Yo</u>del<br><i>IPA</i>/jo/",
+        "media":[
+          {
+            "type": "mp3",
+            "link": "/resources/yo.mp3",
+            "alternative": "https://zkorean.com/study/serve_audio_public/170fe09ec74645615db4e42d90eaed61e62652db128a3655_30.mp3"
+          }
+        ]
+      },
+      "quiz": [],
+      "tags": ["hangul", "vowels", "fat vowels"]
+    }
+    ,{
+      "front": {
+        "template": "text",
+        "lang": "ko",
+        "content": "ㅜ"
+      },
+      "back": {
+        "template": "rawhtml",
+        "lang": "en",
+        "content": "<i>Romanization</i>u<br><i>English word</i>M<u>oo</u>n<br><i>IPA</i>/u/",
+        "media":[
+          {
+            "type": "mp3",
+            "link": "resources/u.mp3",
+            "alternative": "https://zkorean.com/study/serve_audio_public/170fe09ec7464561f81f693716f67119de4bd0f10ca29201_23.mp3"
+          }
+        ]
+      },
+      "quiz": [],
+      "tags": ["hangul", "vowels", "fat vowels"]
+    }
+    ,{
+      "front": {
+        "template": "text",
+        "lang": "ko",
+        "content": "ㅠ"
+      },
+      "back": {
+        "template": "rawhtml",
+        "lang": "en",
+        "content": "<i>Romanization</i>yu<br><i>English word</i>V<u>iew</u><br><i>IPA</i>/ju/",
+        "media":[
+          {
+            "type": "mp3",
+            "link": "/resources/yu.mp3",
+            "alternative": "https://zkorean.com/study/serve_audio_public/170fe09ec7464561767cd75cf19968695a3db02e2cf1caec_31.mp3"
+          }
+        ]
+      },
+      "quiz": [],
+      "tags": ["hangul", "vowels", "fat vowels"]
+    }
+    ,{
+      "front": {
+        "template": "text",
+        "lang": "ko",
+        "content": ""
+      },
+      "back": {
+        "template": "rawhtml",
+        "lang": "en",
+        "content": "<i>Romanization</i>eu<br><i>English word</i>G<u>oo</u>d<br><i>IPA</i>/ɯ/",
+        "media":[
+          {
+            "type": "mp3",
+            "link": "/resources/eu.mp3",
+            "alternative": "https://zkorean.com/study/serve_audio_public/170fe09ec74645610c33962c2f630f89cf091f74d90cee47_24.mp3"
+          }
+        ]
+      },
+      "quiz": [],
+      "tags": ["hangul", "vowels", "fat vowels"]
+    }
+    ,{
+      "front": {
+        "template": "text",
+        "lang": "ko",
+        "content": ""
+      },
+      "back": {
+        "template": "rawhtml",
+        "lang": "en",
+        "content": "<i>Romanization</i><br><i>English word</i><u></u><br><i>IPA</i>//",
+        "media":[
+          {
+            "type": "mp3",
+            "link": ""
+          }
+        ]
+      },
+      "quiz": [],
+      "tags": ["hangul"]
+    }
+  ]
+}

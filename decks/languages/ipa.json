@@ -1,0 +1,47 @@
+{
+  "name": "International Phonetic Alphabet (English-based)",
+  "description": "Basic symbols of the Internation Phonetic Alphabet. Several rare IPA symbols are not included.",
+  "notes": "Initial version containing only the phonetics used for learning Korean",
+  "lang": "en",
+  "author": "Fabio Bonacina",
+  "latestUpdate": "",
+  "references": [{
+      "name": "Help:IPA (English version)",
+      "link": "https://en.wikipedia.org/wiki/Help:IPA"
+    }
+    ,{
+      "name": "IPA specific for Korean",
+      "link": "https://en.wikipedia.org/wiki/Help:IPA/Korean"
+    }
+  ],
+  "cards": [
+    {
+      "front": {
+        "template": "rawhtml|text",
+        "lang": "",
+        "content": "",
+        "media":[
+          {
+            "type": "image|rawhtml|mp3",
+            "link": "",
+            "content": ""
+          }
+        ]
+      },
+      "back": {
+        "template": "rawhtml|text",
+        "lang": "",
+        "content": "",
+        "media":[
+          {
+            "type": "image|rawhtml|mp3",
+            "link": "",
+            "content": ""
+          }
+        ]
+      },
+      "quiz": [],
+      "tags": []
+    }
+  ]
+}
