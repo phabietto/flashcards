@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "Flashcard web application. Manage decks, cards, learning, and quiz.\"",
   "scripts": {
-    "dev": "vite dev --port 3000",
+    "dev": "cross-env NODE_ENV=development vite dev --port 3000",
     "build": "vite build",
     "preview": "vite preview --port 3000"
   },
@@ -20,6 +20,7 @@
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "^1.0.1",
     "autoprefixer": "^10.4.7",
+    "cross-env": "^7.0.3",
     "cssnano": "^5.1.12",
     "postcss": "^8.4.14",
     "svelte": "^3.49.0",
