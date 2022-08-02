@@ -6,6 +6,7 @@
     export let iconLeft = true;
     export let primary = null;
     export let secondary = null;
+    export let small = null;
     export let fill = 'fill-current';
     export let stroke = 'stroke-transparent';
 
@@ -26,6 +27,7 @@
     {disabled} 
     class:primary
     class:secondary
+    class:small
     on:click
 >
     {#if !iconLeft}
@@ -44,6 +46,9 @@
 <style>
     button {
         @apply text-gray-600 bg-white border border-gray-200 hover:bg-gray-100 focus:ring focus:ring-blue-300 focus:outline-none font-medium rounded-md text-sm px-5 py-2.5 text-center inline-flex items-center
+    }
+    button.small {
+        @apply px-2.5 py-1.5 rounded-[.25rem]
     }
     button.primary {
         @apply text-white bg-blue-500 hover:bg-blue-600
