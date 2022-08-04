@@ -6,7 +6,7 @@
   const hasSlot = $$props.$$slots && $$props.$$slots !== undefined;
 </script>
 
-<div class="bg-white flex justify-start items-stretch h-16 my-2 px-4 py-2 rounded-md shadow-md cursor-pointer fill-gray-700 hover:shadow-blue-500/50 hover:fill-blue-500">
+<div class="bg-white flex justify-start items-stretch h-16 my-2 px-4 py-2 rounded-md shadow-sm cursor-pointer fill-gray-700 hover:shadow-blue-300/50 hover:fill-blue-300">
   <div>
     {#if hasSlot}
     <svg

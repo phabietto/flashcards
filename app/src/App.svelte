@@ -2,8 +2,8 @@
   import { text } from "svelte/internal";
   import DeckPreview from "./components/cards/DeckPreview.svelte";
   import StudyMode from "./components/cards/StudyMode.svelte";
-
   import ActiveBreakpointIndicator from "./components/debug/ActiveBreakpointIndicator.svelte";
+  import FlashCard from "./components/flashcard/FlashCard.svelte";
   import Tailwind from "./Tailwind.svelte";
 
   let decks = [
@@ -14,16 +14,48 @@
       author: "Fabio Bonacina",
       cards: [
         {
-          _id: 1,
-          front: "front 1",
-          back: "back 1",
-        },
-        {
-          _id: 2,
-          front: "front 2",
-          back: "back 2",
-        },
-      ],
+          "front": {
+            "template": "text",
+            "lang": "ko",
+            "content": "ㅏ"
+          },
+          "back": {
+            "template": "rawhtml",
+            "lang": "en",
+            "content": "<b>Romanization</b><i>a</i><br><b>English word</b>F<u>a</u>ther<br><b>IPA</b><i>/a/</i>",
+            "media":[
+              {
+                "type": "application/ogg",
+                "link": "/resources/a.mp3",
+                "alternative": "https://upload.wikimedia.org/wikipedia/commons/0/0e/PR-open_front_unrounded_vowel.ogg"
+              }
+            ]
+          },
+          "quiz": [],
+          "tags": ["hangul", "vowels", "tall vowel"]
+        }
+        ,{
+          "front": {
+            "template": "text",
+            "lang": "ko",
+            "content": "ㅣ"
+          },
+          "back": {
+            "template": "rawhtml",
+            "lang": "en",
+            "content": "<i>Romanization</i>i<br><i>English word</i>S<u>ee</u><br><i>IPA</i>/i/",
+            "media":[
+              {
+                "type": "application/ogg",
+                "link": "/resources/i.mp3",
+                "alternative": "https://en.wikipedia.org/wiki/File:Close_front_unrounded_vowel.ogg"
+              }
+            ]
+          },
+          "quiz": [],
+          "tags": ["hangul", "vowels", "tall vowel"]
+        }
+      ]
     },
     {
       name: "International Phonetic Alphabet (English-based)",
@@ -52,19 +84,19 @@
       ],
     },
   ];
-  let selectedDeck = null /*decks[0]*/;
+  let selectedDeck = decks[0]/**/;
 </script>
 
 <Tailwind />
 
 <main class="text-center p-4 mx-0 w-screen">
   {#if selectedDeck}
-    <div class="flex flex-col w-7/12 mx-auto">
+    <div class="flex flex-col w-1/2 mx-auto">
       <h1 class="text-gray-800 font-bold text-2xl my-6 text-left">
         {selectedDeck.name}
       </h1>
       <div class="flex gap-3">
-        <section class="">
+        <section class="w-1/3">
           <h2 class="font-bold text-lg text-gray-700 text-left mb-4">
             Choose how to study
           </h2>
@@ -80,7 +112,7 @@
             <li>
               <StudyMode
                 title="Learn"
-                description="Focus your study using space repetition"
+                description="Focus your study using spaced repetition"
               >
                 <path d="M7 3a1 1 0 000 2h6a1 1 0 100-2H7zM4 7a1 1 0 011-1h10a1 1 0 110 2H5a1 1 0 01-1-1zM2 11a2 2 0 012-2h12a2 2 0 012 2v4a2 2 0 01-2 2H4a2 2 0 01-2-2v-4z" />
               </StudyMode>
@@ -92,7 +124,7 @@
             </li>
           </ul>
         </section>
-        <section class="">flashcard container</section>
+        <section class="flex-grow h-[400px]"><FlashCard card={selectedDeck.cards[0]}></FlashCard></section>
       </div>
     </div>
   {:else}

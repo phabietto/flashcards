@@ -27,12 +27,12 @@
       "back": {
         "template": "rawhtml",
         "lang": "en",
-        "content": "<i>Romanization</i>a<br><i>English word</i><br>H<u>o</u>me<i>IPA</i>/a/",
+        "content": "<i>Romanization</i>a<br><i>English word</i><br>F<u>a</u>ther<i>IPA</i>/a/",
         "media":[
           {
             "type": "application/ogg",
             "link": "/resources/a.mp3",
-            "alternative": "https://en.wikipedia.org/wiki/File:PR-open_front_unrounded_vowel.ogg"
+            "alternative": "https://upload.wikimedia.org/wikipedia/commons/0/0e/PR-open_front_unrounded_vowel.ogg"
           }
         ]
       },
