@@ -27,12 +27,21 @@
       "back": {
         "template": "rawhtml",
         "lang": "en",
-        "content": "<i>Romanization</i>a<br><i>English word</i><br>F<u>a</u>ther<i>IPA</i>/a/",
+        "content": "<b>Romanization</b><i>a</i><br><b>English word</b><i>F<u>a</u>ther<br></i><b>IPA</b><i>/a/</i>",
         "media":[
           {
-            "type": "application/ogg",
-            "link": "/resources/a.mp3",
-            "alternative": "https://upload.wikimedia.org/wikipedia/commons/0/0e/PR-open_front_unrounded_vowel.ogg"
+            "template": "audio",
+            "text": "/a/",
+            "sources": [
+              {
+                "link": "/resources/a.mp3",
+                "type": "audio/mpeg"
+              },
+              {
+                "link": "https://upload.wikimedia.org/wikipedia/commons/0/0e/PR-open_front_unrounded_vowel.ogg",
+                "type": "application/ogg"
+              }
+            ]
           }
         ]
       },
@@ -48,12 +57,21 @@
       "back": {
         "template": "rawhtml",
         "lang": "en",
-        "content": "<i>Romanization</i>i<br><i>English word</i>S<u>ee</u><br><i>IPA</i>/i/",
+        "content": "<b>Romanization</b><i>i</i><br><b>English word</b><i>S<u>ee</u></i><br><b>IPA</b><i>/i/</i>",
         "media":[
           {
-            "type": "application/ogg",
-            "link": "/resources/i.mp3",
-            "alternative": "https://en.wikipedia.org/wiki/File:Close_front_unrounded_vowel.ogg"
+            "template": "audio",
+            "text": "/i/",
+            "sources": [
+              {
+                "link": "/resources/i.mp3",
+                "type": "audio/mpeg"
+              },
+              {
+                "link": "https://upload.wikimedia.org/wikipedia/commons/9/91/Close_front_unrounded_vowel.ogg",
+                "type": "application/ogg"
+              }
+            ]
           }
         ]
       },
@@ -69,11 +87,21 @@
       "back": {
         "template": "rawhtml",
         "lang": "en",
-        "content": "<p>It is silent when used at the beginning of a syllable (it's a consonant placeholder in vowel letters). Pronounced only when it's the ending consonant in a syllable.</p><i>Romanization</i>ieung<br><i>IPA</i>/ŋ/ (only when it's the ending consonant in a syllable)",
+        "content": "<p>It is silent when used at the beginning of a syllable (it's a consonant placeholder in vowel letters). Pronounced only when it's the ending consonant in a syllable.</p><b>Romanization</b><i>ieung</i><br><b>IPA</b><i>/ŋ/</i> (only when it's the ending consonant in a syllable)",
         "media":[
           {
-            "type": "application/ogg",
-            "link": "https://en.wikipedia.org/wiki/File:Velar_nasal.ogg"
+            "template": "audio",
+            "text": "/ŋ/",
+            "sources": [
+              {
+                "link": "/resources/ieung.mp3",
+                "type": "audio/mpeg"
+              },
+              {
+                "link": "https://upload.wikimedia.org/wikipedia/commons/3/39/Velar_nasal.ogg",
+                "type": "application/ogg"
+              }
+            ]
           }
         ]
       },
@@ -89,12 +117,21 @@
       "back": {
         "template": "rawhtml",
         "lang": "en",
-        "content": "<i>Romanization</i>ya<br><i>English word</i><u>Ya</u>rd<br><i>IPA</i>/jɐ/",
+        "content": "<b>Romanization</b><i>ya</i><br><b>English word</b><i><u>Ya</u>rd</i><br><b>IPA</b><i>/jɐ/</i>",
         "media":[
           {
-            "type": "audio/mpeg",
-            "link": "/resources/ya.mp3",
-            "alternative": "https://zkorean.com/study/serve_audio_public/170fe09ec74645617a6d0ab84785d740ce93a0d5acebf59a_28.mp3"
+            "template": "audio",
+            "text": "/jɐ/",
+            "sources": [
+              {
+                "link": "/resources/ya.mp3",
+                "type": "audio/mpeg"
+              },
+              {
+                "link": "https://zkorean.com/study/serve_audio_public/170fe09ec74645617a6d0ab84785d740ce93a0d5acebf59a_28.mp3",
+                "type": "audio/mpeg"
+              }
+            ]
           }
         ]
       },
@@ -110,12 +147,21 @@
       "back": {
         "template": "rawhtml",
         "lang": "en",
-        "content": "<i>Romanization</i>eo<br><i>English word</i>D<u>o</u>g<br><i>IPA</i>/ʌ/",
+        "content": "<b>Romanization</b><i>eo</i><br><b>English word</b><i>D<u>o</u>g</i><br><b>IPA</b><i>/ʌ/</i>",
         "media":[
           {
-            "type": "audio/mpeg",
-            "link": "/resources/eo.mp3",
-            "alternative": "https://zkorean.com/study/serve_audio_public/170fe09ec7464561a651f112bcc34c74d3a29963db135e55_21.mp3"
+            "template": "audio",
+            "text": "/ʌ/",
+            "sources": [
+              {
+                "link": "/resources/eo.mp3",
+                "type": "audio/mpeg"
+              },
+              {
+                "link": "https://zkorean.com/study/serve_audio_public/170fe09ec7464561a651f112bcc34c74d3a29963db135e55_21.mp3",
+                "type": "audio/mpeg"
+              }
+            ]
           }
         ]
       },
@@ -131,12 +177,21 @@
       "back": {
         "template": "rawhtml",
         "lang": "en",
-        "content": "<i>Romanization</i>yeo<br><i>English word</i><u>You</u>ng<br><i>IPA</i>/jʌ/",
+        "content": "<b>Romanization</b><i>yeo</i><br><b>English word</b><i><u>You</u>ng</i><br><b>IPA</b><i>/jʌ/</i>",
         "media":[
           {
-            "type": "mp3",
-            "link": "/resources/yeo.mp3",
-            "alternative": "https://zkorean.com/study/serve_audio_public/170fe09ec746456101755731cb5f1d1e7b63d174fd75cc8f_29.mp3"
+            "template": "audio",
+            "text": "/jʌ/",
+            "sources": [
+              {
+                "link": "/resources/yeo.mp3",
+                "type": "audio/mpeg"
+              },
+              {
+                "link": "https://zkorean.com/study/serve_audio_public/170fe09ec746456101755731cb5f1d1e7b63d174fd75cc8f_29.mp3",
+                "type": "audio/mpeg"
+              }
+            ]
           }
         ]
       },
@@ -152,12 +207,21 @@
       "back": {
         "template": "rawhtml",
         "lang": "en",
-        "content": "<i>Romanization</i>o<br><i>English word</i>H<u>o</u>me<br><i>IPA</i>/o/",
+        "content": "<b>Romanization</b><i>o</i><br><b>English word</b><i>H<u>o</u>me</i><br><b>IPA</b><i>/o/</i>",
         "media":[
           {
-            "type": "mp3",
-            "link": "/resources/o.mp3",
-            "alternative": "https://zkorean.com/study/serve_audio_public/170fe09ec7464561b5540a40dc0e06cc2d916ecbb6ce058f_22.mp3"
+            "template": "audio",
+            "text": "/o/",
+            "sources": [
+              {
+                "link": "/resources/o.mp3",
+                "type": "audio/mpeg"
+              },
+              {
+                "link": "https://zkorean.com/study/serve_audio_public/170fe09ec7464561b5540a40dc0e06cc2d916ecbb6ce058f_22.mp3",
+                "type": "audio/mpeg"
+              }
+            ]
           }
         ]
       },
@@ -173,12 +237,21 @@
       "back": {
         "template": "rawhtml",
         "lang": "en",
-        "content": "<i>Romanization</i>yo<br><i>English word</i><u>Yo</u>del<br><i>IPA</i>/jo/",
+        "content": "<b>Romanization</b><i>yo</i><br><b>English word</b><i><u>Yo</u>del</i><br><b>IPA</b><i>/jo/</i>",
         "media":[
           {
-            "type": "mp3",
-            "link": "/resources/yo.mp3",
-            "alternative": "https://zkorean.com/study/serve_audio_public/170fe09ec74645615db4e42d90eaed61e62652db128a3655_30.mp3"
+            "template": "audio",
+            "text": "/jo/",
+            "sources": [
+              {
+                "link": "/resources/yo.mp3",
+                "type": "audio/mpeg"
+              },
+              {
+                "link": "https://zkorean.com/study/serve_audio_public/170fe09ec74645615db4e42d90eaed61e62652db128a3655_30.mp3",
+                "type": "audio/mpeg"
+              }
+            ]
           }
         ]
       },
@@ -194,12 +267,21 @@
       "back": {
         "template": "rawhtml",
         "lang": "en",
-        "content": "<i>Romanization</i>u<br><i>English word</i>M<u>oo</u>n<br><i>IPA</i>/u/",
+        "content": "<b>Romanization</b><i>u</i><br><b>English word</b><i>M<u>oo</u>n</i><br><b>IPA</b><i>/u/</i>",
         "media":[
           {
-            "type": "mp3",
-            "link": "resources/u.mp3",
-            "alternative": "https://zkorean.com/study/serve_audio_public/170fe09ec7464561f81f693716f67119de4bd0f10ca29201_23.mp3"
+            "template": "audio",
+            "text": "/u/",
+            "sources": [
+              {
+                "link": "resources/u.mp3",
+                "type": "audio/mpeg"
+              },
+              {
+                "link": "https://zkorean.com/study/serve_audio_public/170fe09ec7464561f81f693716f67119de4bd0f10ca29201_23.mp3",
+                "type": "audio/mpeg"
+              }
+            ]
           }
         ]
       },
@@ -215,12 +297,21 @@
       "back": {
         "template": "rawhtml",
         "lang": "en",
-        "content": "<i>Romanization</i>yu<br><i>English word</i>V<u>iew</u><br><i>IPA</i>/ju/",
+        "content": "<b>Romanization</b><i>yu</i><br><b>English word</b><i>V<u>iew</u></i><br><b>IPA</b><i>/ju/</i>",
         "media":[
           {
-            "type": "mp3",
-            "link": "/resources/yu.mp3",
-            "alternative": "https://zkorean.com/study/serve_audio_public/170fe09ec7464561767cd75cf19968695a3db02e2cf1caec_31.mp3"
+            "template": "audio",
+            "text": "/ju/",
+            "sources": [
+              {
+                "link": "/resources/yu.mp3",
+                "type": "audio/mpeg"
+              },
+              {
+                "link": "https://zkorean.com/study/serve_audio_public/170fe09ec7464561767cd75cf19968695a3db02e2cf1caec_31.mp3",
+                "type": "audio/mpeg"
+              }
+            ]
           }
         ]
       },
@@ -236,12 +327,21 @@
       "back": {
         "template": "rawhtml",
         "lang": "en",
-        "content": "<i>Romanization</i>eu<br><i>English word</i>G<u>oo</u>d<br><i>IPA</i>/ɯ/",
+        "content": "<b>Romanization</b><i>eu</i><br><b>English word</b><i>G<u>oo</u>d</i><br><b>IPA</b><i>/ɯ/</i>",
         "media":[
           {
-            "type": "mp3",
-            "link": "/resources/eu.mp3",
-            "alternative": "https://zkorean.com/study/serve_audio_public/170fe09ec74645610c33962c2f630f89cf091f74d90cee47_24.mp3"
+            "template": "audio",
+            "text": "/ɯ/",
+            "sources": [
+              {
+                "link": "/resources/eu.mp3",
+                "type": "audio/mpeg"
+              },
+              {
+                "link": "https://zkorean.com/study/serve_audio_public/170fe09ec74645610c33962c2f630f89cf091f74d90cee47_24.mp3",
+                "type": "audio/mpeg"
+              }
+            ]
           }
         ]
       },
@@ -257,11 +357,17 @@
       "back": {
         "template": "rawhtml",
         "lang": "en",
-        "content": "<i>Romanization</i><br><i>English word</i><u></u><br><i>IPA</i>//",
+        "content": "<b>Romanization</b><i></i><br><b>English word</b><i><u></u></i><br><b>IPA</b><i>//</i>",
         "media":[
           {
-            "type": "mp3",
-            "link": ""
+            "template": "image|rawhtml|audio",
+            "text": "",
+            "sources": [
+              {
+                "link": "",
+                "type": ""
+              }
+            ]
           }
         ]
       },

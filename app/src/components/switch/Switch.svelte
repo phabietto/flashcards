@@ -24,10 +24,10 @@
     }
 </style>
 
-<script>
+<script lang="ts">
     import { createEventDispatcher } from "svelte";
 
-    export let id = '';
+    export let id:string;
     export let text = '';
     export let checked = false;
     export let disabled = false;
@@ -40,7 +40,7 @@
 </script>
 
 {#if type === 'toggle'}
-<div class="toggle w-full mb-4">  
+<div class="toggle">  
     <label for={id} class="flex items-center cursor-pointer" class:disabled>
         <div class="relative">
             <input id={id} type="checkbox" class="sr-only" {disabled} bind:checked on:change={handleClick}/>
@@ -51,7 +51,7 @@
     </label>
 </div>
 {:else}
-<div class="switch w-full mb-12">
+<div class="switch">
     <label for={id} class="flex items-center cursor-pointer" class:disabled>
       <div class="relative">
         <input id={id} type="checkbox" class="sr-only" {disabled} bind:checked on:change={handleClick}/>

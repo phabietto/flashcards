@@ -5,14 +5,18 @@ import CardContent from "./CardContent.svelte";
     let flipClass = '';
 
     function flip() {
+        var selection = window.getSelection();
+        if(selection.toString().length > 0) {
+            return;
+        }
         flipClass = flipClass.length > 0 ? '' : 'card--rotate';
     }
 </script>
 
-<div class="{flipClass} inline-block w-full [perspective:800px] h-[350px]">
+<div class="{flipClass} inline-block w-full [perspective:800px] h-[350px] cursor-pointer">
    <div class="bg-white rounded-2xl shadow-sm min-h-full min-w-full card">
-        <div class="card--front flex justify-center items-center" on:click={flip}><CardContent front contents={card.front}/></div>
-        <div class="card--back flex justify-center items-center" on:click={flip}><CardContent contents={card.back}/></div>
+        <div class="card--front" on:click={flip}><CardContent front contents={card.front}/></div>
+        <div class="card--back" on:click={flip}><CardContent contents={card.back}/></div>
    </div> 
 </div>
 

@@ -5,9 +5,14 @@
     "content": "",
     "media":[
       {
-        "type": "image|rawhtml|mp3",
-        "link": "",
-        "content": ""
+        "template": "image|rawhtml|audio",
+        "text": "",
+        "sources": [
+          {
+            "link": "",
+            "type": ""
+          }
+        ]
       }
     ]
   },
@@ -17,9 +22,14 @@
     "content": "",
     "media":[
       {
-        "type": "image|rawhtml|mp3",
-        "link": "",
-        "content": ""
+        "template": "image|rawhtml|audio",
+        "text": "",
+        "sources": [
+          {
+            "link": "",
+            "type": ""
+          }
+        ]
       }
     ]
   },
