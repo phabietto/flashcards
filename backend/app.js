@@ -2,11 +2,13 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import cors from 'cors';
 import mongoose from 'mongoose';
+import decksRoute from './routes/decks.js';
 
 const app = express();
 app.use(() =>bodyParser.json({limit:'32mb', extended:true}));
 app.use(() =>bodyParser.urlencoded({limit:'32mb', extended:true}));
 app.use(cors());
+app.use('/decks', decksRoute);
 
 const MONGO_URI = '';
 const PORT = process.env.PORT || 3001;
