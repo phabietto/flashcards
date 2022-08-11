@@ -2,11 +2,16 @@
   export let stroke = "stroke-transparent";
   export let title = "";
   export let description = "";
+  export let selected = false;
 
   const hasSlot = $$props.$$slots && $$props.$$slots !== undefined;
 </script>
 
-<div class="bg-white flex justify-start items-stretch h-16 my-2 px-4 py-2 rounded-md shadow-sm cursor-pointer fill-gray-700 hover:shadow-blue-300/50 hover:fill-blue-300">
+<div 
+class="bg-white flex justify-start items-stretch h-16 my-2 px-4 py-2 rounded-md shadow-sm cursor-pointer fill-gray-700 hover:shadow-blue-300/50 hover:fill-blue-300"
+class:selected
+on:click
+>
   <div>
     {#if hasSlot}
     <svg
@@ -23,3 +28,7 @@
     <p class="text-left text-xs text-gray-500">{description}</p>
   </div>
 </div>
+
+<style>
+  .selected { @apply fill-lime-600 shadow-lime-600/75 cursor-default hover:shadow-lime-600/75 hover:fill-lime-600 }
+</style>

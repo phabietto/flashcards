@@ -1,16 +1,23 @@
 <script lang="ts">
+import { afterUpdate } from "svelte";
 import CardContent from "./CardContent.svelte";
 
-    export let card = null;
-    let flipClass = '';
+export let card = null;
+let flipClass = '';
 
-    function flip() {
-        var selection = window.getSelection();
-        if(selection.toString().length > 0) {
-            return;
-        }
-        flipClass = flipClass.length > 0 ? '' : 'card--rotate';
+$: {
+    if(card != null){
+        flipClass = ''
     }
+}
+
+function flip() {
+    var selection = window.getSelection();
+    if(selection.toString().length > 0) {
+        return;
+    }
+    flipClass = flipClass.length > 0 ? '' : 'card--rotate';
+}
 </script>
 
 <div class="{flipClass} inline-block w-full [perspective:800px] h-[350px] cursor-pointer">

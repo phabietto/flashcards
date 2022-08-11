@@ -1,9 +1,10 @@
 <script lang="ts">
   import Button from "./components/button/Button.svelte";
   import DeckPreview from "./components/cards/DeckPreview.svelte";
-  import StudyMode from "./components/cards/StudyMode.svelte";
   import DeckControls from "./components/controls/DeckControls.svelte";
+  import StudyMethods from "./components/controls/StudyMethods.svelte";
   import ActiveBreakpointIndicator from "./components/debug/ActiveBreakpointIndicator.svelte";
+import Deck from "./components/deck/Deck.svelte";
   import Tailwind from "./Tailwind.svelte";
 
 
@@ -58,42 +59,7 @@
 
 <main class="text-center p-4 mx-0 w-screen">
   {#if selectedDeck}
-    <div class="flex flex-col w-1/2 mx-auto">
-      <h1 class="text-gray-800 font-bold text-2xl my-6 text-left">
-        {selectedDeck.name}
-      </h1>
-      <div class="flex gap-3">
-        <section class="w-1/3">
-          <h2 class="font-bold text-lg text-gray-700 text-left mb-4">
-            Choose how to study
-          </h2>
-          <ul>
-            <li>
-              <StudyMode
-                title="Flashcards"
-                description="Review terms and definitions"
-              >
-                <path fill-rule="evenodd" d="M18 13V5a2 2 0 00-2-2H4a2 2 0 00-2 2v8a2 2 0 002 2h3l3 3 3-3h3a2 2 0 002-2zM5 7a1 1 0 011-1h8a1 1 0 110 2H6a1 1 0 01-1-1zm1 3a1 1 0 100 2h3a1 1 0 100-2H6z" clip-rule="evenodd" />
-              </StudyMode>
-            </li>
-            <li>
-              <StudyMode
-                title="Learn"
-                description="Focus your study using spaced repetition"
-              >
-                <path d="M7 3a1 1 0 000 2h6a1 1 0 100-2H7zM4 7a1 1 0 011-1h10a1 1 0 110 2H5a1 1 0 01-1-1zM2 11a2 2 0 012-2h12a2 2 0 012 2v4a2 2 0 01-2 2H4a2 2 0 01-2-2v-4z" />
-              </StudyMode>
-            </li>
-            <li>
-              <StudyMode title="Quiz" description="Take a practice test">
-                  <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd" />
-              </StudyMode>
-            </li>
-          </ul>
-        </section>
-        <DeckControls deck={selectedDeck} on:deck-controls::home={handleHome}/>
-      </div>
-    </div>
+    <Deck deck={selectedDeck} on:deck-controls::home={handleHome}/>
   {:else}
     <div class="w-7/12 mx-auto">
       <div class="flex min-w-full flex-grow my-4">
