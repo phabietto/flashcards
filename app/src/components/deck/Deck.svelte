@@ -13,7 +13,7 @@
     {deck.name}
   </h1>
   <div class="flex gap-3">
-    <StudyMethods />
-    <DeckControls {deck} on:deck-controls::home />
+    <StudyMethods class="w-1/3" />
+    <DeckControls class="w-2/3" {deck} on:deck-controls::home />
   </div>
 </div>

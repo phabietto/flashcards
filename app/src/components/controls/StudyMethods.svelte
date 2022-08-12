@@ -5,7 +5,7 @@ import StudyMode from "../cards/StudyMode.svelte";
 export let studyMode: StudyMethod = StudyMethod.Flashcards;
 </script>
 
-<section class="w-1/3">
+<section class="{$$props.class}">
     <h2 class="font-bold text-lg text-gray-700 text-left mb-4">
     Choose how to study
     </h2>

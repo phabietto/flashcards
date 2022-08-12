@@ -42,7 +42,7 @@
 
 </script>
 
-<section class="flex-grow flex flex-col h-[400px] text-gray-600">
+<section class="flex flex-col justify-end h-[400px] text-gray-600 {$$props.class}">
     <FlashCard card={deck.cards[currentCardIndex]}></FlashCard>
     <div class="flex flex-grow justify-evenly items-center">
         <div class="w-2/5 flex">
