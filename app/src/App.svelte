@@ -1,12 +1,9 @@
 <script lang="ts">
   import Button from "./components/button/Button.svelte";
   import DeckPreview from "./components/cards/DeckPreview.svelte";
-  import DeckControls from "./components/controls/DeckControls.svelte";
-  import StudyMethods from "./components/controls/StudyMethods.svelte";
   import ActiveBreakpointIndicator from "./components/debug/ActiveBreakpointIndicator.svelte";
-import Deck from "./components/deck/Deck.svelte";
+  import Deck from "./components/deck/Deck.svelte";
   import Tailwind from "./Tailwind.svelte";
-
 
   let decks = [
     {
@@ -41,7 +38,11 @@ import Deck from "./components/deck/Deck.svelte";
     fetch(deckPath)
       .then(response => response.json())
       .then(data => {
-        decks = [data, ...decks];
+        if(decks.filter((o) => o.name === data.name).length === 0){
+          decks = [data, ...decks];
+        }else{
+          console.log(`Deck '${data.name}' has already been loaded`);
+        }
       })
       .catch(e => console.log(e));
   }

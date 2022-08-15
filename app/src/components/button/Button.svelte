@@ -22,8 +22,23 @@
     });
 </script>
 
+{#if $$slots.icon}
+<button 
+        type="button"
+        class="f-icon w-8 h-8 flex items-center justify-center rounded-full
+        text-gray-600 fill-gray-600 
+        hover:bg-blue-300/25 hover:text-blue-500 hover:fill-blue-500
+        {$$props.class}"
+        {disabled} 
+        on:click>
+        <slot name="icon"></slot>
+    <!-- <div class="w-5 h-5 ">
+    </div> -->
+</button>
+{:else}
 <button 
     type="button" 
+    class="btn"
     {disabled} 
     class:primary
     class:secondary
@@ -42,9 +57,10 @@
     {text}     
     {/if}
 </button>
+{/if}
 
 <style>
-    button {
+    button.btn {
         @apply text-gray-600 bg-white border border-gray-200 hover:bg-gray-100 focus:ring focus:ring-blue-300 focus:outline-none font-medium rounded-md text-sm px-5 py-2.5 text-center inline-flex items-center
     }
     button.small {
@@ -61,5 +77,8 @@
     }
     button.primary:disabled {
         @apply text-white bg-blue-400
+    }
+    button.f-icon:disabled {
+        @apply fill-gray-400 text-gray-400 bg-transparent border-none
     }
 </style>

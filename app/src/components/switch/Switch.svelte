@@ -12,17 +12,19 @@
     }
 </script>
 {#if $$slots.icon}
-<div class="f-icon w-8 h-8 flex items-center justify-center rounded-full text-gray-600 hover:bg-blue-300/25 hover:text-blue-500" class:checked title={$$props.title}>
+<div    class="f-icon w-8 h-8 flex items-center justify-center rounded-full
+            text-gray-600 fill-gray-600 
+            hover:bg-blue-300/25 hover:text-blue-500 hover:fill-blue-500" 
+        class:checked 
+        title={$$props.title}>
     <label for={id} class="flex items-center cursor-pointer" class:disabled>
         <div class="relative w-5 h-5 {$$props.class}">
             <input id={id} type="checkbox" class="sr-only" {disabled} bind:checked on:change={handleClick}/>
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                {#if $$slots.iconChecked && checked}
+            {#if $$slots.iconChecked && checked}
                 <slot name="iconChecked"></slot>
-                {:else}
+            {:else}
                 <slot name="icon"></slot>
-                {/if}
-            </svg>
+            {/if}
         </div>
     </label>  
 </div>
@@ -70,14 +72,11 @@
         @apply cursor-not-allowed;
     }
 
-    input[type='checkbox']:focus:not(:disabled) ~ svg,
-    input[type='checkbox']:active:not(:disabled) ~ svg {
+    input[type='checkbox']:focus:not(:disabled) ~ slot,
+    input[type='checkbox']:active:not(:disabled) ~ slot {
         @apply outline-none ring ring-blue-300;
     }
-    input:checked + svg {
-        @apply text-blue-500;
-    }
     div.f-icon.checked {
-        @apply hover:bg-blue-300/25 hover:text-blue-500
+        @apply hover:bg-blue-300/25 hover:text-blue-500 text-blue-500 fill-blue-500;
     }
 </style>
