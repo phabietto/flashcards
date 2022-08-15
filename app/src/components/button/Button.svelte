@@ -29,6 +29,7 @@
         text-gray-600 fill-gray-600 
         hover:bg-blue-300/25 hover:text-blue-500 hover:fill-blue-500
         {$$props.class}"
+        title={$$props.title}
         {disabled} 
         on:click>
         <slot name="icon"></slot>

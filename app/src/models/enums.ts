@@ -1,4 +1,4 @@
-export enum StudyMethod {
+export enum DeckMode {
     Flashcards = 'flashcards',
     Learn = 'learn',
     Quiz = 'quiz',

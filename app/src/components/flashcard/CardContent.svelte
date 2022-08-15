@@ -74,7 +74,7 @@ import Icon from "../icon/Icon.svelte";
         {/each}
     </div>
     {/if}
-    <div aria-label="{front ? 'front' : 'back'}" class="flex-grow w-full flex items-center justify-center" class:front lang={contents.lang}>
+    <div aria-label="{front ? 'front' : 'back'}" class="flex-grow w-full flex items-center justify-center cursor-text" class:front lang={contents.lang}>
         <div class="m-4">
             {#if contents.template == 'text'}
                 {contents.content}
