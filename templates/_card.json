@@ -1,6 +1,6 @@
 {
   "front": {
-    "template": "rawhtml|text",
+    "template": "rawhtml|text|md",
     "lang": "",
     "content": "",
     "media":[
@@ -17,7 +17,7 @@
     ]
   },
   "back": {
-    "template": "rawhtml|text",
+    "template": "rawhtml|text|md",
     "lang": "",
     "content": "",
     "media":[

@@ -4,9 +4,12 @@
   import ActiveBreakpointIndicator from "./components/debug/ActiveBreakpointIndicator.svelte";
   import Deck from "./components/deck/Deck.svelte";
   import Tailwind from "./Tailwind.svelte";
+  import {deckStatus} from './stores/deckStatus';
+  import { DeckStatus as DeckStatusModel } from "./models/deckStatus";
+  import { Deck as DeckModel } from "./models/deck";
 
-  let decks = [
-    {
+  let decks: DeckModel[] = [
+    new DeckModel({
       name: "International Phonetic Alphabet (English-based)",
       description:
         "Basic symbols of the Internation Phonetic Alphabet. Several rare IPA symbols are not included.",
@@ -14,32 +17,26 @@
         "Initial version containing only the phonetics used for learning Korean",
       lang: "en",
       author: "Fabio Bonacina",
-      cards: [
-        {
-          _id: 101,
-          front: "front 101",
-          back: "back 101",
+      cards: [ {
+        front: {
+          template: 'aaa',
+          content: 'Card #1'
         },
-        {
-          _id: 102,
-          front: "front 102",
-          back: "back 102",
-        },
-        {
-          _id: 103,
-          front: "front 103",
-          back: "back 103",
-        },
+        back: {
+          template: 'text',
+          content: 'This is the back of Card #1'
+        }
+      }
       ],
-    },
+    }),
   ];
 
   function loadDeck() {
     fetch(deckPath)
       .then(response => response.json())
       .then(data => {
-        if(decks.filter((o) => o.name === data.name).length === 0){
-          decks = [data, ...decks];
+        if(decks.filter((o) => o.Name === data.name).length === 0){
+          decks = [new DeckModel(data), ...decks];
         }else{
           console.log(`Deck '${data.name}' has already been loaded`);
         }
@@ -60,7 +57,7 @@
 
 <main class="text-center p-4 mx-0 w-screen">
   {#if selectedDeck}
-    <Deck deck={selectedDeck} on:deck-controls::home={handleHome}/>
+    <Deck deck={selectedDeck} on:deck-controls::home={() => deckStatus.set(new DeckStatusModel())}/>
   {:else}
     <div class="w-7/12 mx-auto">
       <div class="flex min-w-full flex-grow my-4">
@@ -72,8 +69,12 @@
         </Button>
       </div>
       <ul class="grid grid-cols-3 gap-4 auto-rows-fr">
-        {#each decks as deck (deck.name)}
-          <li><DeckPreview {deck} on:click={() => (selectedDeck = deck)} /></li>
+        {#each decks as deck (deck.Name)}
+          <li><DeckPreview {deck} on:click={() => deckStatus.update(o => {
+            const ds = {...o}
+            ds.Deck = deck;
+            return ds;
+          }) } /></li>
         {/each}
       </ul>
     </div>

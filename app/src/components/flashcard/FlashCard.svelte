@@ -25,7 +25,7 @@ function flip() {
 </script>
 {#key card}
 <div class="{flipClass} inline-block w-full [perspective:800px] h-[350px] cursor-pointer" class:heartbeat>
-   <div class="bg-white rounded-2xl shadow-sm min-h-full min-w-full card">
+   <div class="bg-white rounded-2xl shadow-sm min-h-full min-w-full border border-gray-200 card">
         <div class="card--front" on:click={flip}><CardContent front contents={card.front} /></div>
         <div class="card--back" on:click={flip}><CardContent contents={card.back} tags={card.tags}/></div>
    </div> 
@@ -36,7 +36,10 @@ function flip() {
         transition: transform .32s ease,opacity .12s linear!important;
         transform-style: preserve-3d;
     }
-    .card--front,.card--back { position: absolute;backface-visibility: hidden;width: 100%;height: 100%;z-index: 0;}
+    .card--front,.card--back { 
+        backface-visibility: hidden;
+        @apply absolute w-full h-full z-0
+        }
     .card--back {transform: rotateX(180deg);}
     .card--rotate .card {transform: rotateX(180deg);}
     .card--rotate .card--back {transform: rotateX(180deg);z-index: 1;}

@@ -5,6 +5,7 @@
     import FlashCard from "../flashcard/FlashCard.svelte";
     import Icon from "../icon/Icon.svelte";
     import Switch from "../switch/Switch.svelte";
+    import { deckStatus } from "../../stores/deckStatus";
 
     export let deck;
     export let deckMode: DeckMode;

@@ -5,3 +5,12 @@ export enum DeckMode {
     Edit = 'edit',
     Undefined = ''
 }
+
+export enum Template {
+    RawHtml = 'rawhtml',
+    Text = 'text',
+    Markdown = 'md',
+    Image = 'image',
+    Audio = 'audio',
+    Undefined = ''
+}

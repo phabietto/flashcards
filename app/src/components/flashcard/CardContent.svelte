@@ -1,7 +1,7 @@
 <script lang="ts">
     import Badge from "../badge/Badge.svelte";
-import Button from "../button/Button.svelte";
-import Icon from "../icon/Icon.svelte";
+    import Button from "../button/Button.svelte";
+    import Icon from "../icon/Icon.svelte";
 
     export let contents = null;
     export let front = false;
@@ -74,8 +74,8 @@ import Icon from "../icon/Icon.svelte";
         {/each}
     </div>
     {/if}
-    <div aria-label="{front ? 'front' : 'back'}" class="flex-grow w-full flex items-center justify-center cursor-text" class:front lang={contents.lang}>
-        <div class="m-4">
+    <div aria-label="{front ? 'front' : 'back'}" class="flex-grow w-full flex items-center justify-center" class:front lang={contents.lang}>
+        <div class="m-4 cursor-text">
             {#if contents.template == 'text'}
                 {contents.content}
             {:else}
