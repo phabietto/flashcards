@@ -2,8 +2,11 @@ import type { Deck } from "./deck";
 import { DeckMode } from "./enums";
 
 export class DeckStatus {
-    constructor() {
-
+    constructor(deck: Deck = null, mode: DeckMode = DeckMode.Flashcards) {
+        if(deck) {
+            this.Deck = deck;
+            this.Mode = mode;
+        }
     }
 
     Mode: DeckMode = DeckMode.Undefined;

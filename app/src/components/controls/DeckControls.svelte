@@ -1,26 +1,29 @@
 <script lang="ts">
     import { DeckMode } from "../../models/enums";
-    import { createEventDispatcher } from "svelte";
+    import { createEventDispatcher, onDestroy } from "svelte";
     import Button from "../button/Button.svelte";
     import FlashCard from "../flashcard/FlashCard.svelte";
     import Icon from "../icon/Icon.svelte";
     import Switch from "../switch/Switch.svelte";
-    import { deckStatus } from "../../stores/deckStatus";
-
-    export let deck;
-    export let deckMode: DeckMode;
+    import {deckStatus as store} from '../../stores/deckStatus';
+    import type { DeckStatus as DeckStatusModel } from "../../models/deckStatus";
 
     let continuous = false;
     let pendingChanges = false;
     let currentCardIndex = 0;
     let maxCards = 0;
+    let deckStatus: DeckStatusModel;
+    const unsubscribe = store.subscribe(value => {
+        deckStatus = value;
+    });
 
+    onDestroy(unsubscribe);
     $:{
-        maxCards = deck.cards.length;
+        maxCards = deckStatus.Deck.Cards.length;
     }
 
     function switchCard(direction: number) {
-        const len = deck.cards.length;
+        const len = deckStatus.Deck.Cards.length;
         if(direction > 0) {
             if(currentCardIndex >= len - 1) {
                 if(continuous) {
@@ -47,7 +50,7 @@
 
 </script>
 <section class="flex flex-col justify-end h-[400px] text-gray-600 {$$props.class}">
-    <FlashCard card={deck.cards[currentCardIndex]}></FlashCard>
+    <FlashCard card={deckStatus.Deck.Cards[currentCardIndex]}></FlashCard>
     <div class="flex flex-grow justify-evenly items-center">
         <div class="w-2/5 flex">
             <Button on:click={handleHome} title="Back to deck selection.">
@@ -71,7 +74,7 @@
             </Button>
         </div>
         <div class="w-2/5 flex justify-end items-center space-x-0.5">
-            {#if deckMode !== DeckMode.Edit}
+            {#if deckStatus.Mode !== DeckMode.Edit}
             <Switch id="test" bind:checked={continuous} class="w-6 h-6" title="Cycle continuosly through deck">
                 <Icon slot="icon" type="stroke">
                     <path d="m14 16 .354-.354.353.354-.353.354L14 16Zm-3.646-4.354 4 4-.708.708-4-4 .708-.708Zm4 4.708-4 4-.708-.708 4-4 .708.708Z" stroke-width="1"/>

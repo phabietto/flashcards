@@ -34,7 +34,8 @@ export class CardContent {
             this.Lang = json.lang || 'en';
             this.Content = json.content || '';
             if(json.media && json.media.constructor === Array) {
-                json.media.map(o => new Media(o));
+                console.log('mapping media', json.media);
+                this.Media = json.media.map(o => new Media(o));
             }
         }
     }

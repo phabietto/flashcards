@@ -4,9 +4,10 @@
   import ActiveBreakpointIndicator from "./components/debug/ActiveBreakpointIndicator.svelte";
   import Deck from "./components/deck/Deck.svelte";
   import Tailwind from "./Tailwind.svelte";
-  import {deckStatus} from './stores/deckStatus';
+  import {deckStatus as store} from './stores/deckStatus';
   import { DeckStatus as DeckStatusModel } from "./models/deckStatus";
   import { Deck as DeckModel } from "./models/deck";
+  import { DeckMode } from "./models/enums";
 
   let decks: DeckModel[] = [
     new DeckModel({
@@ -43,21 +44,14 @@
       })
       .catch(e => console.log(e));
   }
-
-  function handleHome() {
-    selectedDeck = null;
-  }
-
-  // let selectedDeck = decks[0]/**/;
-  let selectedDeck = null;
   let deckPath = '';
 </script>
 
 <Tailwind />
 
 <main class="text-center p-4 mx-0 w-screen">
-  {#if selectedDeck}
-    <Deck deck={selectedDeck} on:deck-controls::home={() => deckStatus.set(new DeckStatusModel())}/>
+  {#if $store.Deck}
+    <Deck on:deck-controls::home={() => store.set(new DeckStatusModel(null))}/>
   {:else}
     <div class="w-7/12 mx-auto">
       <div class="flex min-w-full flex-grow my-4">
@@ -70,11 +64,13 @@
       </div>
       <ul class="grid grid-cols-3 gap-4 auto-rows-fr">
         {#each decks as deck (deck.Name)}
-          <li><DeckPreview {deck} on:click={() => deckStatus.update(o => {
-            const ds = {...o}
-            ds.Deck = deck;
-            return ds;
-          }) } /></li>
+          <li><DeckPreview {deck} on:click={
+            () => store.update(o => {
+              o.Deck = deck;
+              o.Mode = DeckMode.Flashcards;
+              return o;
+            }) 
+          } /></li>
         {/each}
       </ul>
     </div>

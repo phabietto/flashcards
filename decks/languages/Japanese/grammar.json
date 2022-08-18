@@ -1,0 +1,91 @@
+{
+  "name": "Basic Japanese grammar",
+  "description": "Based on the \"Basic Japanese Grammar\" book published by Tuttle",
+  "lang": "en",
+  "author": "Fabio Bonacina",
+  "notes": "",
+  "latestUpdate": "",
+  "references": [{
+      "name": "",
+      "link": ""
+    }
+  ],
+  "cards": [
+    {
+      "front": {
+        "template": "rawhtml|text|md",
+        "lang": "",
+        "content": "",
+        "media":[
+          {
+            "template": "image|rawhtml|audio",
+            "text": "",
+            "sources": [
+              {
+                "link": "",
+                "type": ""
+              }
+            ]
+          }
+        ]
+      },
+      "back": {
+        "template": "rawhtml|text|md",
+        "lang": "",
+        "content": "",
+        "media":[
+          {
+            "template": "image|rawhtml|audio",
+            "text": "",
+            "sources": [
+              {
+                "link": "",
+                "type": ""
+              }
+            ]
+          }
+        ]
+      },
+      "quiz": [],
+      "tags": []
+    },
+    {
+      "front": {
+        "template": "rawhtml|text|md",
+        "lang": "",
+        "content": "",
+        "media":[
+          {
+            "template": "image|rawhtml|audio",
+            "text": "",
+            "sources": [
+              {
+                "link": "",
+                "type": ""
+              }
+            ]
+          }
+        ]
+      },
+      "back": {
+        "template": "rawhtml|text|md",
+        "lang": "",
+        "content": "",
+        "media":[
+          {
+            "template": "image|rawhtml|audio",
+            "text": "",
+            "sources": [
+              {
+                "link": "",
+                "type": ""
+              }
+            ]
+          }
+        ]
+      },
+      "quiz": [],
+      "tags": []
+    }
+  ]
+}

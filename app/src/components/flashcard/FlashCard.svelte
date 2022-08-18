@@ -1,7 +1,8 @@
 <script lang="ts">
 import CardContent from "./CardContent.svelte";
+import type { Card } from "../../models/card";
 
-export let card = null;
+export let card: Card = null;
 let flipClass = '';
 let heartbeat = true;
 
@@ -26,8 +27,8 @@ function flip() {
 {#key card}
 <div class="{flipClass} inline-block w-full [perspective:800px] h-[350px] cursor-pointer" class:heartbeat>
    <div class="bg-white rounded-2xl shadow-sm min-h-full min-w-full border border-gray-200 card">
-        <div class="card--front" on:click={flip}><CardContent front contents={card.front} /></div>
-        <div class="card--back" on:click={flip}><CardContent contents={card.back} tags={card.tags}/></div>
+        <div class="card--front" on:click={flip}><CardContent front contents={card.Front} /></div>
+        <div class="card--back" on:click={flip}><CardContent contents={card.Back} tags={card.Tags}/></div>
    </div> 
 </div>
 {/key}
@@ -39,7 +40,8 @@ function flip() {
     .card--front,.card--back { 
         backface-visibility: hidden;
         @apply absolute w-full h-full z-0
-        }
+        ;
+    }
     .card--back {transform: rotateX(180deg);}
     .card--rotate .card {transform: rotateX(180deg);}
     .card--rotate .card--back {transform: rotateX(180deg);z-index: 1;}

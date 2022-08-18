@@ -1,9 +1,10 @@
 <script lang="ts">
+    import type { CardContent } from "../../models/card";
     import Badge from "../badge/Badge.svelte";
     import Button from "../button/Button.svelte";
     import Icon from "../icon/Icon.svelte";
 
-    export let contents = null;
+    export let contents: CardContent = null;
     export let front = false;
     export let tags = null;
 
@@ -48,10 +49,10 @@
     // }
 </script>
 <div class="flex flex-col justify-evenly items-strech min-h-full">
-    {#if contents.media && contents.media.length > 0}
+    {#if contents.Media && contents.Media.length > 0}
     <div aria-label="media" class="flex h-8 space-x-1 mx-4 mt-4">
-        {#each contents.media.map(generateId, 'audio_') as [item, id] (item.__id)}
-            {#if item.template === 'audio'}
+        {#each contents.Media.map(generateId, 'audio_') as [item, id] (item.__id)}
+            {#if item.Template === 'audio'}
                 <div>
                     <Button on:click={(e) => soundControl(e, id)} title="Previous card." class="{audioControls[id] === 1 ? 'hidden' : ''}">
                         <Icon slot="icon">
@@ -65,8 +66,8 @@
                         </Icon>
                     </Button>
                     <audio id={id} on:ended={() => mediaEnded(id)}>
-                        {#each item.sources as source (source.link)}                            
-                        <source src="{source.link}" type="{source.type}">
+                        {#each item.Sources as source (source.Link)}                            
+                        <source src="{source.Link}" type="{source.Type}">
                         {/each}
                     </audio>
                 </div>
@@ -74,12 +75,12 @@
         {/each}
     </div>
     {/if}
-    <div aria-label="{front ? 'front' : 'back'}" class="flex-grow w-full flex items-center justify-center" class:front lang={contents.lang}>
+    <div aria-label="{front ? 'front' : 'back'}" class="flex-grow w-full flex items-center justify-center" class:front lang={contents.Lang}>
         <div class="m-4 cursor-text">
-            {#if contents.template == 'text'}
-                {contents.content}
+            {#if contents.Template == 'text'}
+                {contents.Content}
             {:else}
-                {@html contents.content}
+                {@html contents.Content}
             {/if}
         </div>
     </div>
@@ -93,9 +94,9 @@
 </div>
 
 <style>
-    .front { @apply text-4xl }
-    div :global(p) { @apply m-2 text-left text-sm}
-    div :global(span) { @apply text-left text-xs}
-    div :global(b) { @apply mr-6 }
-    div :global(u) { @apply font-bold }
+    .front { @apply text-4xl ;}
+    div :global(p) { @apply m-2 text-left text-sm ;}
+    div :global(span) { @apply text-left text-xs ;}
+    div :global(b) { @apply mr-6 ;}
+    div :global(u) { @apply font-bold ;}
 </style>
