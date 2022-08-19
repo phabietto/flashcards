@@ -1,12 +1,15 @@
 <script lang="ts">
     import type { CardContent } from "../../models/card";
+    import { DeckMode } from "../../models/enums";
     import Badge from "../badge/Badge.svelte";
     import Button from "../button/Button.svelte";
+    import TextEditor from "../editors/TextEditor.svelte";
     import Icon from "../icon/Icon.svelte";
 
     export let contents: CardContent = null;
     export let front = false;
     export let tags = null;
+    export let mode:DeckMode = DeckMode.Undefined;
 
     let audioControls = [];
 
