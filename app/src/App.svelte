@@ -20,7 +20,7 @@
       author: "Fabio Bonacina",
       cards: [ {
         front: {
-          template: 'aaa',
+          template: 'text',
           content: 'Card #1'
         },
         back: {

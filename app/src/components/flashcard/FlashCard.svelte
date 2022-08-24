@@ -29,8 +29,8 @@ function flip() {
 {#key card}
 <div class="{flipClass} inline-block w-full [perspective:800px] h-[350px] cursor-pointer" class:heartbeat>
    <div class="bg-white rounded-2xl shadow-sm min-h-full min-w-full border border-gray-200 card">
-        <div class="card--front" on:click={flip}><CardContent front contents={card.Front} {mode}/></div>
-        <div class="card--back" on:click={flip}><CardContent contents={card.Back} tags={card.Tags}/></div>
+        <div class="card--front"><CardContent front contents={card.Front} {mode} on:click={flip}/></div>
+        <div class="card--back"><CardContent contents={card.Back} tags={card.Tags} {mode} on:click={flip}/></div>
    </div> 
 </div>
 {/key}
