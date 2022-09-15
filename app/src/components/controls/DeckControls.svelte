@@ -51,7 +51,7 @@
 </script>
 <section class="flex space-x-1 h-[400px] text-gray-600 {$$props.class}">
     <div class="flex-col grow justify-end">
-        <FlashCard card={$store.Deck.Cards[currentCardIndex]} mode={$store.Mode}></FlashCard>
+        <FlashCard card={$store.Deck.Cards[currentCardIndex]} mode={$store.Mode} path={$store.Deck.GetResourcePath()}></FlashCard>
         <div class="flex flex-grow justify-evenly items-center">
             <div class="w-2/5 flex">
                 <Button on:click={handleHome} title="Back to deck selection.">

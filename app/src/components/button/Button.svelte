@@ -40,6 +40,7 @@
 <button 
     type="button" 
     class="btn"
+    title={$$props.title}
     {disabled} 
     class:primary
     class:secondary

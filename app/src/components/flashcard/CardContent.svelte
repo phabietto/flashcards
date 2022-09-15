@@ -8,14 +8,19 @@
     import TextEditor from "../editors/TextEditor.svelte";
     import Icon from "../icon/Icon.svelte";
     import Switch from "../switch/Switch.svelte";
+    import '../../styling/markdown.css';
+    import '../../styling/cardhtml.css';
+    import { Viewer } from 'bytemd';
+    import gfm from '@bytemd/plugin-gfm';
 
     export let contents: CardContent = null;
     export let front = false;
     export let tags = null;
     export let mode:DeckMode = DeckMode.Undefined;
-    let pinned = false;
-
+    export let path: string;
+    
     const dispatch = createEventDispatcher();
+    let pinned = false;
     let audioControls = [];
 
     function soundControl(e: Event, id: string) {
@@ -60,8 +65,11 @@
     //     }
     //     return hash;
     // }
+    function GenerateLink(link: string) {
+        return (link.startsWith('./') ? path : '') + link;
+    }
 </script>
-<div class="box-border flex flex-col justify-evenly items-strech min-h-full p-4" on:click={handleClick}>
+<div class="box-border flex flex-col justify-evenly items-strech min-h-full px-4 py-3" on:click={handleClick}>
     <div aria-label="card-top" class="flex h-8 justify-start">
         <div aria-label="media" class="flex space-x-1">
             {#if contents.Media && contents.Media.length > 0}
@@ -81,7 +89,7 @@
                             </Button>
                             <audio id={id} on:ended={() => mediaEnded(id)}>
                                 {#each item.Sources as source (source.Link)}                            
-                                <source src="{source.Link}" type="{source.Type}">
+                                <source src="{GenerateLink(source.Link)}" type="{source.Type}">
                                 {/each}
                             </audio>
                         </div>
@@ -99,11 +107,13 @@
         </div>
         {/if}
     </div>
-    <div aria-label="{front ? 'front' : 'back'}" class="flex-grow w-full flex items-center justify-center" class:front lang={contents.Lang}>
+    <div aria-label="{front ? 'front' : 'back'}" class="flex-grow w-full flex items-center justify-center max-h-[252px] overflow-y-auto" class:front lang={contents.Lang}>
         {#if contents.Template == 'text'}
-        <TextEditor class="m-4 cursor-text" bind:value={contents.Content} readonly={mode !== DeckMode.Edit } rows={6} on:edit={() => pinned = true}/>
+        <TextEditor class="text-editor m-4 cursor-text" bind:value={contents.Content} readonly={mode !== DeckMode.Edit } rows={6} on:edit={() => pinned = true}/>
+        {:else if contents.Template == 'md'}
+        <Viewer value={contents.Content} plugins={[gfm()]}></Viewer>
         {:else}
-        <div class="m-4 cursor-text">
+        <div class="m-4 cursor-text text-editor">
             {@html contents.Content}
         </div>
         {/if}
@@ -126,8 +136,4 @@
 
 <style>
     .front { @apply text-4xl ;}
-    div :global(p) { @apply m-2 text-left text-sm ;}
-    div :global(span) { @apply text-left text-xs ;}
-    div :global(b) { @apply mr-6 ;}
-    div :global(u) { @apply font-bold ;}
 </style>

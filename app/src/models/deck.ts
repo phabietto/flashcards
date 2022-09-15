@@ -26,4 +26,18 @@ export class Deck {
     Cards: Card[] = [];
 
     HasPendingChanges: boolean = false;
+    HasBeenUpdated = false;
+    Updated = () => {
+        this.HasBeenUpdated = true;
+        window.setTimeout(() => {
+            this.HasBeenUpdated = false;
+        }, 1500);
+    }
+    Path: string = '';
+    GetResourcePath = () => {
+        if(this.Path && this.Path.length > 0) {
+            var fragments = this.Path.split("/");
+            return fragments.slice(0, fragments.length -1).join("/") + "/";
+        }
+    }
 }

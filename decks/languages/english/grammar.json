@@ -1,0 +1,152 @@
+{
+    "name": "English grammar pills",
+    "description": "Excertps from LetThemTalkTV youtube channel",
+    "lang": "en",
+    "author": "Fabio Bonacina",
+    "notes": "",
+    "latestUpdate": "",
+    "references": [{
+        "name": "LetThemTalkTV",
+        "link": "https://www.youtube.com/c/LetThemTalkTV"
+      }
+    ],
+    "cards": [
+      {
+        "front": {
+          "template": "md",
+          "lang": "en",
+          "content": "> **Must** vs **Have to**\n>\n>Pt. I"
+        },
+        "back": {
+          "template": "md",
+          "lang": "en",
+          "content": "## Must\nuse for INTERNAL obligation\n\ne.g.\n1. I must got to the dentist\n2. I must eat more vegetables\n\n## Have to\nuse for EXTERNAL obligation\n\ne.g.\n1. I have to finish this report by 5PM\n2. I have to clean up the dishes or my girlfriend will be very angry with me"
+        },
+        "quiz": [],
+        "tags": ["grammar", "english", "obligation"]
+      },
+      {
+        "front": {
+          "template": "md",
+          "lang": "en",
+          "content": "> **Must** vs **Have to**\n>\n>Pt. II"
+        },
+        "back": {
+          "template": "md",
+          "lang": "en",
+          "content": "## Must\nUsed only in present tense\nIt's also used in questions:\n- *Q.* Must you leave so soon?\n- *A.* I have to go to the dentist..\n\nNegative form: MUSTN'T is a negative obligation\n## Have to\nDON'T HAVE TO means no obligation, it's ok if you do it"
+        },
+        "quiz": [],
+        "tags": ["grammar", "english", "obligation"]
+      },
+      {
+        "front": {
+          "template": "md",
+          "lang": "en",
+          "content": "> **Present Perfect** vs **Past Simple**\n>\n>Pt. I"
+        },
+        "back": {
+          "template": "md",
+          "lang": "en",
+          "content": "## Present Perfect\n#### To talk about life experiences:\n- I *have flown* in an elicopter.\n- *Have you ever flown* in an elicopter ?\n#### Action that repeated in the past several times up to now\n- *I've made* many YouTube videos\n- *I've read* many books by Charles Dickens\n\nWe're interested in **if** you've done something not in **when**"
+        },
+        "quiz": [],
+        "tags": ["grammar", "english", "present perfect", "past simple", "tenses"]
+      },
+      {
+        "front": {
+          "template": "md",
+          "lang": "en",
+          "content": "> **Present Perfect** vs **Past Simple**\n>\n>Pt. II"
+        },
+        "back": {
+          "template": "md",
+          "lang": "en",
+          "content": "## Past Simple\n#### To say WHEN something happened\n- They *went* to the Maldives for their honeymoon.\n\n**Remember: past phrase past tense**"
+        },
+        "quiz": [],
+        "tags": ["grammar", "english", "present perfect", "past simple", "tenses"]
+      },
+      {
+        "front": {
+          "template": "md",
+          "lang": "en",
+          "content": "> **Present Perfect** vs **Past Simple**\n>\n>Pt. III"
+        },
+        "back": {
+          "template": "md",
+          "lang": "en",
+          "content": "## Present Perfect\n#### For actions that started in the past and are still happening *\n- *I've known* John for a long time\n\n**we can also use Present Perfect Continuous with active verbs*\n#### For actions that happened in the past that have consequences for the present\n- I've baked you a cake (I baked it yesterday for you to eat now)\n- I've cut my finger (it's still hurting now)"
+        },
+        "quiz": [],
+        "tags": ["grammar", "english", "present perfect", "past simple", "tenses"]
+      },
+      {
+        "front": {
+          "template": "md",
+          "lang": "en",
+          "content": "> **Present Perfect** vs **Past Simple**\n>\n>Pt. IV"
+        },
+        "back": {
+          "template": "md",
+          "lang": "en",
+          "content": "## Present Perfect or Past Simple\n#### With unfinished time phrase (*Today, This week, This month, ..*)\nBoth tenses are possible\n1. *Have you been* to the gym today ?\n2. *Did you go* to the gym today ?\n\nDifference:\n1. There is still the possibility that you're going to the gym\n2. No more chances to go to the gym\n\n**Remember: past phrase past tense**"
+        },
+        "quiz": [],
+        "tags": ["grammar", "english", "present perfect", "past simple", "tenses"]
+      },
+      {
+        "front": {
+          "template": "md",
+          "lang": "en",
+          "content": ""
+        },
+        "back": {
+          "template": "md",
+          "lang": "en",
+          "content": ""
+        },
+        "quiz": [],
+        "tags": ["grammar", "english"]
+      },
+      {
+        "front": {
+          "template": "rawhtml|text|md",
+          "lang": "",
+          "content": "",
+          "media":[
+            {
+              "template": "image|rawhtml|audio",
+              "text": "",
+              "sources": [
+                {
+                  "link": "",
+                  "type": ""
+                }
+              ]
+            }
+          ]
+        },
+        "back": {
+          "template": "rawhtml|text|md",
+          "lang": "",
+          "content": "",
+          "media":[
+            {
+              "template": "image|rawhtml|audio",
+              "text": "",
+              "sources": [
+                {
+                  "link": "",
+                  "type": ""
+                }
+              ]
+            }
+          ]
+        },
+        "quiz": [],
+        "tags": []
+      }
+    ]
+  }
+  

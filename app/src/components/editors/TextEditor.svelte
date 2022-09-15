@@ -70,5 +70,4 @@ import Icon from "../icon/Icon.svelte";
   {/if}
 </div>
 
-<style>
-</style>
+<style></style>

@@ -32,17 +32,43 @@
     }),
   ];
 
-  function loadDeck() {
-    fetch(deckPath)
-      .then(response => response.json())
-      .then(data => {
-        if(decks.filter((o) => o.Name === data.name).length === 0){
-          decks = [new DeckModel(data), ...decks];
-        }else{
-          console.log(`Deck '${data.name}' has already been loaded`);
-        }
-      })
-      .catch(e => console.log(e));
+  function loadDeck(path) {
+    console.log("loading ", path);
+    if(path && path.length > 0){
+      fetch(path)
+        .then(response => response.json())
+        .then(data => {
+          if(decks.filter((o) => o.Name === data.name).length === 0){
+            let model = new DeckModel(data);
+            model.Path = path;
+            decks = [model, ...decks];
+            model.Updated();
+          }else{
+            console.log(`Deck '${data.name}' has already been loaded`);
+          }
+        })
+        .catch(e => console.log(e));
+    }
+  }
+  function reloadDeck(path) {
+    console.log("reloading ", path);
+    if(path && path.length > 0){
+      fetch(path)
+        .then(response => response.json())
+        .then(data => {
+          let found = decks.filter((o) => o.Name === data.name);
+          if(found.length > 0){
+            let index = decks.indexOf(found[0]);
+            let model = new DeckModel(data);          
+            model.Path = path;
+            decks = [...decks.slice(0,index),model, ...decks.slice(index+1)];
+            model.Updated();
+          }else{
+            console.log(`Deck '${data.name}' has already been loaded`);
+          }
+        })
+        .catch(e => console.log(e));
+    }
   }
   let deckPath = '';
 </script>
@@ -58,13 +84,15 @@
         <div class="bg-gray-100 text-gray-600 inline-flex items-center w-1/3 mr-4 p-2 rounded-lg">
           <input type="text" placeholder="path" class="bg-transparent outline-none text-base px-1 min-w-full" bind:value={deckPath}>
         </div>
-        <Button text="Load level" iconLeft={false} primary fill="fill-transparent" stroke="stroke-current" on:click={loadDeck}>
+        <Button text="Load level" iconLeft={false} primary fill="fill-transparent" stroke="stroke-current" on:click={() => loadDeck(deckPath)}>
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 13h6m-3-3v6m5 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
         </Button>
       </div>
       <ul class="grid grid-cols-3 gap-4 auto-rows-fr">
         {#each decks as deck (deck.Name)}
-          <li><DeckPreview {deck} on:click={
+          <li><DeckPreview {deck}
+          on:deckpreview:reload={() => reloadDeck(deck.Path)}
+          on:click={
             () => store.update(o => {
               o.Deck = deck;
               o.Mode = DeckMode.Flashcards;
