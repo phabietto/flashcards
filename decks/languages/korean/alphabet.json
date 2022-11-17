@@ -34,7 +34,7 @@
             "text": "/a/",
             "sources": [
               {
-                "link": "/resources/a.mp3",
+                "link": "./resources/a.mp3",
                 "type": "audio/mpeg"
               },
               {
@@ -64,7 +64,7 @@
             "text": "/i/",
             "sources": [
               {
-                "link": "/resources/i.mp3",
+                "link": "./resources/i.mp3",
                 "type": "audio/mpeg"
               },
               {
@@ -87,14 +87,14 @@
       "back": {
         "template": "rawhtml",
         "lang": "en",
-        "content": "<p>It is silent when used at the beginning of a syllable (it's a consonant placeholder in vowel letters). Pronounced only when it's the ending consonant in a syllable.</p><b>Romanization</b><i>ieung</i><br><b>IPA</b><i>/ŋ/</i> (only when it's the ending consonant in a syllable)",
+        "content": "<b>Romanization</b><i>ieung</i><br><b>English word</b><i>ri<u>ng</u></i><br><b>IPA</b><i>/ŋ/</i></span>(only when it's the ending consonant in a syllable)</span><p>It is silent when used at the beginning of a syllable (it's a consonant placeholder in vowel letters). Pronounced only when it's the ending consonant in a syllable.</p>",
         "media":[
           {
             "template": "audio",
             "text": "/ŋ/",
             "sources": [
               {
-                "link": "/resources/ieung.mp3",
+                "link": "./resources/ieung.mp3",
                 "type": "audio/mpeg"
               },
               {
@@ -106,7 +106,7 @@
         ]
       },
       "quiz": [],
-      "tags": ["hangul", "consonant"]
+      "tags": ["hangul", "consonants"]
     }
     ,{
       "front": {
@@ -124,7 +124,7 @@
             "text": "/jɐ/",
             "sources": [
               {
-                "link": "/resources/ya.mp3",
+                "link": "./resources/ya.mp3",
                 "type": "audio/mpeg"
               },
               {
@@ -154,7 +154,7 @@
             "text": "/ʌ/",
             "sources": [
               {
-                "link": "/resources/eo.mp3",
+                "link": "./resources/eo.mp3",
                 "type": "audio/mpeg"
               },
               {
@@ -184,7 +184,7 @@
             "text": "/jʌ/",
             "sources": [
               {
-                "link": "/resources/yeo.mp3",
+                "link": "./resources/yeo.mp3",
                 "type": "audio/mpeg"
               },
               {
@@ -214,7 +214,7 @@
             "text": "/o/",
             "sources": [
               {
-                "link": "/resources/o.mp3",
+                "link": "./resources/o.mp3",
                 "type": "audio/mpeg"
               },
               {
@@ -244,7 +244,7 @@
             "text": "/jo/",
             "sources": [
               {
-                "link": "/resources/yo.mp3",
+                "link": "./resources/yo.mp3",
                 "type": "audio/mpeg"
               },
               {
@@ -274,7 +274,7 @@
             "text": "/u/",
             "sources": [
               {
-                "link": "resources/u.mp3",
+                "link": "./resources/u.mp3",
                 "type": "audio/mpeg"
               },
               {
@@ -304,7 +304,7 @@
             "text": "/ju/",
             "sources": [
               {
-                "link": "/resources/yu.mp3",
+                "link": "./resources/yu.mp3",
                 "type": "audio/mpeg"
               },
               {
@@ -317,12 +317,12 @@
       },
       "quiz": [],
       "tags": ["hangul", "vowels", "fat vowels"]
-    }
-    ,{
+    },
+    {
       "front": {
         "template": "text",
         "lang": "ko",
-        "content": ""
+        "content": "ㅡ"
       },
       "back": {
         "template": "rawhtml",
@@ -334,7 +334,7 @@
             "text": "/ɯ/",
             "sources": [
               {
-                "link": "/resources/eu.mp3",
+                "link": "./resources/eu.mp3",
                 "type": "audio/mpeg"
               },
               {
@@ -347,12 +347,90 @@
       },
       "quiz": [],
       "tags": ["hangul", "vowels", "fat vowels"]
-    }
-    ,{
+    },
+    {
       "front": {
         "template": "text",
         "lang": "ko",
-        "content": ""
+        "content": "ㄱ"
+      },
+      "back": {
+        "template": "md",
+        "lang": "en",
+        "content": "|기역|\n|-|\n|giyeok|\n||Start of word|Start of syllable|End of word|\n|-|-|-|-|\n|English word|k (**k**ite)| g (**g**host)|k (wal**k**)|\n|IPA|/k/|/k/|/k/|",
+        "media":[
+          {
+            "template": "audio",
+            "text": "giyeok",
+            "sources": [
+              {
+                "link": "./resources/giyeok.mp3",
+                "type": "audio/mpeg"
+              }
+            ]
+          }
+        ]
+      },
+      "quiz": [],
+      "tags": ["hangul", "consonants"]
+    },
+    {
+      "front": {
+        "template": "text",
+        "lang": "ko",
+        "content": "ㅋ"
+      },
+      "back": {
+        "template": "md",
+        "lang": "en",
+        "content": "|키읔|\n|-|\n|kieuk|\n||Start of word|Start of syllable|End of word|\n|-|-|-|-|\n|English word|kh (**kh**aki)| kh (**kh**aki)|kh (**kh**aki)|\n|IPA|/kʰ/|/kʰ/|/kʰ/|",
+        "media":[
+          {
+            "template": "audio",
+            "text": "kieuk",
+            "sources": [
+              {
+                "link": "./resources/kieuk.mp3",
+                "type": "audio/mpeg"
+              }
+            ]
+          }
+        ]
+      },
+      "quiz": [],
+      "tags": ["hangul", "consonants"]
+    },
+    {
+      "front": {
+        "template": "text",
+        "lang": "ko",
+        "content": "ㅎ"
+      },
+      "back": {
+        "template": "md",
+        "lang": "en",
+        "content": "|히읕|\n|-|\n|hieut|\n||Start of word|Start of syllable|End of word|\n|-|-|-|-|\n|English word|h (**h**ot)| h (**h**ot)|silent|\n|IPA|/h/|/h/|-|",
+        "media":[
+          {
+            "template": "audio",
+            "text": "hieut",
+            "sources": [
+              {
+                "link": "./resources/hieut.mp3",
+                "type": "audio/mpeg"
+              }
+            ]
+          }
+        ]
+      },
+      "quiz": [],
+      "tags": ["hangul"]
+    },
+    {
+      "front": {
+        "template": "text",
+        "lang": "ko",
+        "content": "--EMPTY--"
       },
       "back": {
         "template": "rawhtml",

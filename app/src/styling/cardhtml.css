@@ -1,0 +1,4 @@
+.text-editor p { @apply m-2 text-left text-sm ;}
+.text-editor span { @apply text-left text-xs ;}
+.text-editor b { @apply mr-6 ;}
+.text-editor u { @apply font-bold ;}

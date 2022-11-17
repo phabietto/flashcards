@@ -18,8 +18,11 @@
   "author": "Fabio Bonacina",
   "license": "ISC",
   "devDependencies": {
+    "@bytemd/plugin-gfm": "^1.17.2",
     "@sveltejs/vite-plugin-svelte": "^1.0.1",
+    "@tailwindcss/typography": "^0.5.7",
     "autoprefixer": "^10.4.7",
+    "bytemd": "^1.17.2",
     "cross-env": "^7.0.3",
     "cssnano": "^5.1.12",
     "postcss": "^8.4.14",
@@ -28,5 +31,8 @@
     "tailwindcss": "^3.1.6",
     "typescript": "^4.7.4",
     "vite": "^3.0.3"
+  },
+  "dependencies": {
+    "github-markdown-css": "^5.1.0"
   }
 }
