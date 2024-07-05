@@ -13,38 +13,48 @@
   "cards": [
     {
       "front": {
+        "template": "text",
+        "lang": "ja",
+        "content": "okurigana (送り仮名)",
+        "media":[]
+      },
+      "back": {
+        "template": "rawhtml",
+        "lang": "en",
+        "content": "送り仮名 are <i>kana</i> suffixes following kanji stems in Japanese written words.",
+        "media":[]
+      },
+      "quiz": [],
+      "tags": []
+    },
+    {
+      "front": {
+        "template": "text",
+        "lang": "ja",
+        "content": "okurigana (送り仮名) uses",
+        "media":[]
+      },
+      "back": {
+        "template": "rawhtml",
+        "lang": "en",
+        "content": "1. To inflect adjectives and verbs.<br>2. To force a particular kanji to have a specific meaning and be read a certain way.<br>They also help the reader to distinguish between various kun-yomi for the same kanji",
+        "media":[]
+      },
+      "quiz": [],
+      "tags": []
+    },
+    {
+      "front": {
         "template": "rawhtml|text|md",
-        "lang": "",
+        "lang": "ja",
         "content": "",
-        "media":[
-          {
-            "template": "image|rawhtml|audio",
-            "text": "",
-            "sources": [
-              {
-                "link": "",
-                "type": ""
-              }
-            ]
-          }
-        ]
+        "media":[]
       },
       "back": {
         "template": "rawhtml|text|md",
-        "lang": "",
+        "lang": "en",
         "content": "",
-        "media":[
-          {
-            "template": "image|rawhtml|audio",
-            "text": "",
-            "sources": [
-              {
-                "link": "",
-                "type": ""
-              }
-            ]
-          }
-        ]
+        "media":[]
       },
       "quiz": [],
       "tags": []
